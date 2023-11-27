@@ -26,20 +26,26 @@
 
 <body>
   <center>
-  <h1>Weather Rendering between London and Stoke On Trent</h1>
+  <h1 id="title">Weather Rendering between London and Stoke On Trent</h1>
   <div id='instructions'>
 	<h3>Instruction</h3>
-	<p>The website shows the latitude, longtitude, trends of humidity, temperature and wind speed of Stoke on Trent and London. </p>
+	<p>The website shows the latitude, longtitude, trends of weather measurements (humidity, temperature and wind speed) of Stoke on Trent and London. </p>
 	<p>Choose the location and weather measurements you want to see. </p>
 	<p>Choose the color and chart you want to see in the chart. </p>
   </div>
-  <h3>Location: </h3> 
+  <div class="information">
+  <span class="h3-style">Location: </span>
+  <span>
   <input id='stoke' type="radio" value="Stoke" name="task 1" onclick="clickStoke()" checked><label for="Stoke-on-Trent">Stoke-on-Trent</label>
   <input id='london' type="radio" value="London" name="task 1" onclick="clickLondon()"><label for="London">London</label>
-
-  <h2 id='location'></h2>
+  </span>
+  </div>
   
+  
+  <div class="information">
+  <h1 id='location'></h1>
   <h3>Latitude and Longitude: </h3> 
+  <span>
   <table>
 	<tr>
 		<th>Latitude</th>
@@ -50,20 +56,31 @@
 		<th><label id="lon"></label></th>
 	</tr>
   </table>
+  </span>
+  </div>
   
-  <h3>Temperature, Humidity and Wind</h3>
+  <div class="information">
+  <span class="h3-style">Weather measurements: </span>
+  <span>
   <input type="radio" value="Temperature" name="task2" onclick="temperatureInOnePlace()" checked><label for="Temperature">Temperature</label>
   <input type="radio" value="Humidity" name="task2" onclick="humidityInOnePlace()"><label for="Humidity">Humidity</label>
   <input type="radio" value="Wind Speed" name="task2" onclick="windInOnePlace()"><label for="Wind Speed">Wind Speed</label>
+  </span>
+  </div>
 
-  <h3>Change the color and type of the graph</h3>
+  <div class="information">
+  <span class="h3-style">Change the color and chart of the graph: </span>
+  <span>
   <input type="checkbox" value="Color: Red" name="task3" onclick="colorToRedStoke()"><label for="Color: Red">Color: Red</label>
   <input type="checkbox" value="Type: Line" name="task3" onclick="chartToLineStoke()"><label for="Chart: Line">Chart: Line Chart</label>
+  </span>
+  </div>
+  
   <div class="canvas-container">
     <canvas id="myChart" style="max-width:100%;height:auto;"></canvas>
   </div>
   
-  
+  <!--
   <h2>London VS Stoke On Trent</h2>
   <h3>Temperature, Humidity and Wind Speed</h3>
   <input type="radio" value="Temperature" name="task4" onclick="temperature()" checked><label for="Temperature">Temperature</label>
@@ -72,8 +89,9 @@
   <div class="canvas-container">
 	<canvas id="myChart2" style="max-width:100%;height:auto;"></canvas>
   </div>
-  
+  -->
 </center>
 </body>
 <script src="weather_script2.js"></script>
 </html>
+
