@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Rendering Weather Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="dailyweatherdata.js"></script>
+<script src="weatherforecast.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+  integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--<script src="weather_script.js"></script>-->
+<link rel="stylesheet" href="weather_style.css">
+</head>
+<style>
+  .canvas-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100vh; */ /* Adjust this as needed */
+	}
+
+  canvas {
+    width: 1000px !important;
+    height: 400px !important;
+  }
+</style>
+
+<body>
+  <center>
+  <h1>Weather Rendering between London and Stoke On Trent</h1>
+  
+  <h3>Location: </h3> 
+  <input id='stoke' type="radio" value="Stoke" name="task 1" onclick="clickStoke()" checked><label for="Stoke-on-Trent">Stoke-on-Trent</label>
+  <input id='london' type="radio" value="London" name="task 1" onclick="clickLondon()"><label for="London">London</label>
+
+  <h2 id='location'></h2>
+  
+  <h3>Latitude and Longitude: </h3> 
+  <table>
+	<tr>
+		<th>Latitude</th>
+		<th><label id="lat"></label></th>
+	</tr>
+	<tr>
+		<th>Longtitude</th>
+		<th><label id="lon"></label></th>
+	</tr>
+  </table>
+  
+  <h3>Temperature, Humidity and Wind</h3>
+  <input type="radio" value="Temperature" name="task2" onclick="temperatureInOnePlace()" checked><label for="Temperature">Temperature</label>
+  <input type="radio" value="Humidity" name="task2" onclick="humidityInOnePlace()"><label for="Humidity">Humidity</label>
+  <input type="radio" value="Wind Speed" name="task2" onclick="windInOnePlace()"><label for="Wind Speed">Wind Speed</label>
+
+  <h3>Change the color and type of the graph</h3>
+  <input type="checkbox" value="Color: Red" name="task3" onclick="colorToRedStoke()"><label for="Color: Red">Color: Red</label>
+  <input type="checkbox" value="Type: Line" name="task3" onclick="typeToLineStoke()"><label for="Type: Line">Type: Line</label>
+  <div class="canvas-container">
+    <canvas id="myChart" style="max-width:100%;height:auto;"></canvas>
+  </div>
+  
+  
+  <h2>London VS Stoke On Trent</h2>
+  <h3>Temperature, Humidity and Wind Speed</h3>
+  <input type="radio" value="Temperature" name="task4" onclick="temperature()" checked><label for="Temperature">Temperature</label>
+  <input type="radio" value="Humidity" name="task4" onclick="humidity()"><label for="Humidity">Humidity</label>
+  <input type="radio" value="Wind Speed" name="task4" onclick="wind()"><label for="Wind Speed">Wind Speed</label>
+  <div class="canvas-container">
+	<canvas id="myChart2" style="max-width:100%;height:auto;"></canvas>
+  </div>
+  
+</center>
+</body>
+<script src="weather_script2.js"></script>
+</html>

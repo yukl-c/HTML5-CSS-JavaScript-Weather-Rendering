@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('wallpaper.jpg');
+	background-size: cover;
+	
+}
+
+h1 {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+table, th, td {
+  border:1px solid black;
+}
