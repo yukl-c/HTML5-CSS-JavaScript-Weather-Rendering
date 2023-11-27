@@ -122,7 +122,7 @@
   
   var task3ConfigClick = true;
   var config;
-  function chartToLineStoke()(){
+  function chartToLineStoke(){
     if (task3ConfigClick === true) {
 		task3ConfigClick = false;
 		config = 'line';
