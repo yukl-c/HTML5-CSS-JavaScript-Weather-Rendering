@@ -27,12 +27,10 @@
 <body>
   <center>
   <h1>Weather Rendering between London and Stoke On Trent</h1>
-
   <div id='instruvtions'>
-	<h2>Instruction</h2>
+	<h3>Instruction</h3>
 	<p>The website shows the latitude, longtitude, trends of humidity, temperature and wind speed of Stoke on Trent and London. Choose the location and weather measurements you want to see. Choose the color and chart you want to see in the chart. </p>
   </div>
-  
   <h3>Location: </h3> 
   <input id='stoke' type="radio" value="Stoke" name="task 1" onclick="clickStoke()" checked><label for="Stoke-on-Trent">Stoke-on-Trent</label>
   <input id='london' type="radio" value="London" name="task 1" onclick="clickLondon()"><label for="London">London</label>
@@ -58,7 +56,7 @@
 
   <h3>Change the color and type of the graph</h3>
   <input type="checkbox" value="Color: Red" name="task3" onclick="colorToRedStoke()"><label for="Color: Red">Color: Red</label>
-  <input type="checkbox" value="Type: Line" name="task3" onclick="typeToLineStoke()"><label for="Type: Line">Type: Line</label>
+  <input type="checkbox" value="Type: Line" name="task3" onclick="chartToLineStoke()"><label for="Chart: Line">Chart: Line Chart</label>
   <div class="canvas-container">
     <canvas id="myChart" style="max-width:100%;height:auto;"></canvas>
   </div>
